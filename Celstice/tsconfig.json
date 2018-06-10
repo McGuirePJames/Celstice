@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    //"lib": [ "es2015", "dom" ],
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "./wwwroot/scripts",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [ "./node_modules", "./node_modules/@types" ],
+    "types": [
+      "node"
+    ]
+  },
+  //"include": [
+
+    ////  "./Scripts/**/*",
+    ////  "./src/",
+    ////  "./src/**/*",
+    ////  "./Scripts/",
+    ////  "./Scripts/Home/",
+    ////  "./*"
+  //],
+  "exclude": [
+    "node_modules",
+    "wwwroot",
+    "Scripts/app"
+  ]
+}

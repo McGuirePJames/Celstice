@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celstice", "Celstice\Celstice.csproj", "{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Celstice.Web", "Celstice\Celstice.Web.csproj", "{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celstice.Data", "Celstice.Data\Celstice.Data.csproj", "{51D129CA-9E02-41EB-AC17-A561EC5E4259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celstice.Repo", "Celstice.Repo\Celstice.Repo.csproj", "{9DC554F1-0FA1-434F-B6B9-ED0C273D1EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celstice.Service", "Celstice.Service\Celstice.Service.csproj", "{37F45678-DAD9-417F-860A-242EA91C8290}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D129CA-9E02-41EB-AC17-A561EC5E4259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D129CA-9E02-41EB-AC17-A561EC5E4259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D129CA-9E02-41EB-AC17-A561EC5E4259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D129CA-9E02-41EB-AC17-A561EC5E4259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC554F1-0FA1-434F-B6B9-ED0C273D1EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC554F1-0FA1-434F-B6B9-ED0C273D1EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC554F1-0FA1-434F-B6B9-ED0C273D1EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC554F1-0FA1-434F-B6B9-ED0C273D1EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F45678-DAD9-417F-860A-242EA91C8290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F45678-DAD9-417F-860A-242EA91C8290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F45678-DAD9-417F-860A-242EA91C8290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F45678-DAD9-417F-860A-242EA91C8290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
