@@ -19,15 +19,6 @@
       "node"
     ]
   },
-  //"include": [
-
-    ////  "./Scripts/**/*",
-    ////  "./src/",
-    ////  "./src/**/*",
-    ////  "./Scripts/",
-    ////  "./Scripts/Home/",
-    ////  "./*"
-  //],
   "exclude": [
     "node_modules",
     "wwwroot",

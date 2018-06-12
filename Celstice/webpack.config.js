@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const Pkg = require('./package.json');
 //var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const env = process.env.NODE_ENV
 //config = {
 
@@ -13,10 +13,16 @@ module.exports = {
     plugins: [
         //new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity }),
         //new BundleAnalyzerPlugin()
-        new UglifyJsPlugin()
+        new UglifyJsPlugin(),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
     ],
     entry: {
-        Home: '../Celstice/Scripts/Home/Entry.tsx'
+        Home: ['../Selstice/Scripts/Home/Entry.tsx', '../Selstice/Stylesheets/StyleSheet.scss']
     },
 
     output: {
@@ -72,13 +78,23 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.scss/,
                 exclude: /node_modules/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" }
+                    MiniCssExtractPlugin.loader,
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS
                 ]
             },
+            {
+                test: /\.css/,
+                exclude: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS
+                ]
+            }
         ]
     }
 }

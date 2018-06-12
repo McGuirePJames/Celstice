@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selstice.Web", "Celstice\Selstice.Web.csproj", "{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selstice.Data", "Selstice.Data\Selstice.Data.csproj", "{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selstice.Service", "Selstice.Service\Selstice.Service.csproj", "{B1E2B25F-8315-45FE-B3BC-2FDC1E2F84CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selstice.Repo", "Selstice.Repo\Selstice.Repo.csproj", "{D5FF52F6-2A20-4357-B05C-6EC05D678B3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1E2B25F-8315-45FE-B3BC-2FDC1E2F84CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1E2B25F-8315-45FE-B3BC-2FDC1E2F84CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1E2B25F-8315-45FE-B3BC-2FDC1E2F84CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1E2B25F-8315-45FE-B3BC-2FDC1E2F84CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FF52F6-2A20-4357-B05C-6EC05D678B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FF52F6-2A20-4357-B05C-6EC05D678B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FF52F6-2A20-4357-B05C-6EC05D678B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FF52F6-2A20-4357-B05C-6EC05D678B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42154BE6-72FC-4DEC-AB07-DA8AAFB33742}
+	EndGlobalSection
+EndGlobal

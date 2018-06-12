@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using React.AspNet;
 using React;
 
-namespace Celstice
+namespace Selstice
 {
     public class Startup
     {

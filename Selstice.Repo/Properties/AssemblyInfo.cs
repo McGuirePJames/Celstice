@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Celstice.Service")]
+[assembly: AssemblyTitle("Selstice.Repo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Celstice.Service")]
+[assembly: AssemblyProduct("Selstice.Repo")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("37f45678-dad9-417f-860a-242ea91c8290")]
+[assembly: Guid("d5ff52f6-2a20-4357-b05c-6ec05d678b3c")]
 
 // Version information for an assembly consists of the following four values:
 //

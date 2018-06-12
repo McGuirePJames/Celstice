@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Celstice.Service
+namespace Selstice.Service
 {
     public class Class1
     {

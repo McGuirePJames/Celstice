@@ -1,6 +1,6 @@
 using System;
 
-namespace Celstice.Models
+namespace Selstice.Models
 {
     public class ErrorViewModel
     {

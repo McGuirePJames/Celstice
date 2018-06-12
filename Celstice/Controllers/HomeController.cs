@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Celstice.Models;
+using Selstice.Models;
 
-namespace Celstice.Controllers
+namespace Selstice.Controllers
 {
     public class HomeController : Controller
     {
