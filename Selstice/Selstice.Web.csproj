@@ -32,6 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Components\Client\" />
+    <Folder Include="Scripts\NewFolder\" />
     <Folder Include="wwwroot\scripts\js\" />
   </ItemGroup>
 

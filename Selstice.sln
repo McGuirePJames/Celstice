@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selstice.Web", "Celstice\Selstice.Web.csproj", "{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selstice.Web", "Selstice\Selstice.Web.csproj", "{39A69CA6-BEA9-4C09-ACB7-9AE2E2FE6999}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selstice.Data", "Selstice.Data\Selstice.Data.csproj", "{656B9613-8FC5-4CF8-A93D-AEF0336B0B1E}"
 EndProject
