@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\scripts\Home\ParticlesServer.jsx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Scripts\Home\Entry.tsx" />
     <None Remove="Scripts\Home\Particles.tsx" />
   </ItemGroup>
@@ -24,17 +20,13 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\Home\Entry.tsx" />
-    <TypeScriptCompile Include="Scripts\Home\Particles.tsx" />
+    <TypeScriptCompile Include="Components\Client\SpaceBackground\SpaceBackground.tsx" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\scripts\Home\ParticlesServer.jsx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Components\Client\" />
     <Folder Include="Scripts\NewFolder\" />
-    <Folder Include="wwwroot\scripts\js\" />
+    <Folder Include="wwwroot\src\" />
+    <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 
 </Project>

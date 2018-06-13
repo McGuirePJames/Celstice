@@ -1,13 +1,14 @@
 ﻿import Particles from 'react-particles-js'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import '../SpaceBackground/SpaceBackgroundStylesheet.css'
 
 
-export class Particle extends React.Component {
+export class SpaceBackground extends React.Component {
     render() {
         return (
-            <div>
-                <Particles
+            <div className="container-spacebackground">
+                <Particles className="spacebackground"
                     params={{
                         particles: {
                             number: {
@@ -124,4 +125,4 @@ export class Particle extends React.Component {
         )
     }
 }
-export default Particle;
+export default SpaceBackground;

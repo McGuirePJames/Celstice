@@ -22,12 +22,12 @@ module.exports = {
         })
     ],
     entry: {
-        Home: ['../Selstice/Scripts/Home/Entry.tsx', '../Selstice/Stylesheets/StyleSheet.scss']
+        HomeBundle: ['../Selstice/Scripts/Home/Entry.tsx', '../Selstice/Stylesheets/Home/Index.scss']
     },
 
     output: {
         filename: '[name].bundle.js',
-        path: __dirname + '/wwwroot/scripts/js',
+        path: __dirname + '/wwwroot/bundles/',
         jsonpFunction: 'webpackJsonp'
     },
 
@@ -40,7 +40,7 @@ module.exports = {
     devtool: 'inline-source-map',
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: ['.ts', '.tsx', ".js", ".json"]
+        extensions: ['.ts', '.tsx', ".js", ".jsx", ".json"]
     },
 
     module: {
