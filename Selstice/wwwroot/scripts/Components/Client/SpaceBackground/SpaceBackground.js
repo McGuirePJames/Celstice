@@ -19,8 +19,8 @@ var SpaceBackground = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SpaceBackground.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement(react_particles_js_1.default, { params: {
+        return (React.createElement("div", { className: "container-spacebackground" },
+            React.createElement(react_particles_js_1.default, { className: "spacebackground", params: {
                     particles: {
                         number: {
                             value: 2000,

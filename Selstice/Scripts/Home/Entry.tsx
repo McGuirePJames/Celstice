@@ -1,11 +1,11 @@
-﻿import SpaceBackground from '../../Components/Client/SpaceBackground/SpaceBackground';
+﻿import Space from '../../Components/Client/HighOrderComponents/Space/Space';
 import NavigationBar from '../../Components/Server/NavigationBar/NavigationBar'
 import * as ReactDOM from 'react-dom';
 import * as React from 'react'
 
 window.onload = function () {
     ReactDOM.render(
-        <SpaceBackground />,
+        <Space />,
         document.getElementById('particleMount')
     );
     ReactDOM.render(
