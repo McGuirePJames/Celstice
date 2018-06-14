@@ -11,21 +11,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("../Moon/MoonStylesheet.css");
-var Moon = /** @class */ (function (_super) {
-    __extends(Moon, _super);
-    function Moon() {
+require("../CompanyMotto/CompanyMottoStylesheet.css");
+var CompanyMotto = /** @class */ (function (_super) {
+    __extends(CompanyMotto, _super);
+    function CompanyMotto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Moon.prototype.render = function () {
-        return (React.createElement("div", { className: "container-moon" },
-            React.createElement("div", { className: "moon" },
-                React.createElement("div", { className: "crater small" }),
-                React.createElement("div", { className: "crater medium" }),
-                React.createElement("div", { className: "crater large" }))));
+    CompanyMotto.prototype.render = function () {
+        return (React.createElement("div", { className: "container-company-motto" },
+            React.createElement("p", null, "Hello World")));
     };
-    return Moon;
+    return CompanyMotto;
 }(React.Component));
-exports.Moon = Moon;
-exports.default = Moon;
-//# sourceMappingURL=Moon.js.map
+exports.CompanyMotto = CompanyMotto;
+exports.default = CompanyMotto;
+//# sourceMappingURL=CompanyMotto.js.map

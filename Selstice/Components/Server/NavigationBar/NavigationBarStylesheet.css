@@ -8,14 +8,37 @@
         height: 100%;
         width: 90%;
         margin: auto;
+        display: flex;
     }
 
         .main-navigation-bar .sub-container .company-logo {
             height: 100%;
         }
 
-            .main-navigation-bar .sub-container .company-logo img {
-                height: 100%;
-                object-fit: fill;
+        .main-navigation-bar .sub-container a {
+            color: white;
+            font-size: 14pt;
+            font-weight: 200;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        .main-navigation-bar .sub-container .company-logo img {
+            height: 100%;
+            object-fit: fill;
+            cursor: pointer;
+        }
+
+        .main-navigation-bar .sub-container .navigation-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 50px;
+        }
+        .main-navigation-bar .sub-container .navigation-options .navigation-option{
+            margin-right: 30px;
+        }
+            .main-navigation-bar .sub-container .navigation-options .navigation-option p{
                 cursor: pointer;
             }

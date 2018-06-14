@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\Client\CompanyMotto\CompanyMotto.tsx" />
     <None Remove="Components\Client\HighOrderComponents\Space.tsx" />
     <None Remove="Components\Client\Moon\Moon.tsx" />
     <None Remove="Scripts\Home\Entry.tsx" />
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="Components\Client\CompanyMotto\CompanyMotto.tsx" />
     <TypeScriptCompile Include="Components\Client\HighOrderComponents\Space\Space.tsx" />
     <TypeScriptCompile Include="Components\Client\Moon\Moon.tsx" />
     <TypeScriptCompile Include="Scripts\Home\Entry.tsx" />

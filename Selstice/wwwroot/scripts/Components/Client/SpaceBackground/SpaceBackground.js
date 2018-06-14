@@ -23,7 +23,7 @@ var SpaceBackground = /** @class */ (function (_super) {
             React.createElement(react_particles_js_1.default, { className: "spacebackground", params: {
                     particles: {
                         number: {
-                            value: 2000,
+                            value: 1000,
                             density: {
                                 enable: true,
                                 value_area: 789.1476416322727
@@ -58,7 +58,7 @@ var SpaceBackground = /** @class */ (function (_super) {
                             }
                         },
                         size: {
-                            value: 2,
+                            value: 1.5,
                             random: true,
                             anim: {
                                 enable: true,
