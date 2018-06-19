@@ -1,0 +1,43 @@
+﻿#rocket {
+    position: absolute;
+    height: 130px;
+    width: 110px;
+    left: 500px;
+    z-index: 10;
+}
+
+#rocket #ignition {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    background-color: orange;
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#rocket #thruster {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    border-bottom: 50px solid #555;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 50px;
+}
+
+#rocket #thrusterConnector {
+    position: absolute;
+    height: 0;
+    width: 50px;
+    left: 50%;
+    bottom: 110px;
+    transform: rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+    border-bottom: 20px solid #555;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}

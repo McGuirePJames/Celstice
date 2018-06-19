@@ -1,0 +1,14 @@
+﻿.container-about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    .container-about-us-description {
+        display: grid;
+        grid-template-rows: auto;
+        padding: 10px 60px 10px 60px;
+
+        .about-us-title {
+            font-size: 16pt;
+        }
+    }
+}

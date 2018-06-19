@@ -15,6 +15,7 @@ var Moon_1 = require("../../Moon/Moon");
 var SpaceBackground_1 = require("../../SpaceBackground/SpaceBackground");
 require("../Space/SpaceStylesheet.css");
 var CompanyMotto_1 = require("../../CompanyMotto/CompanyMotto");
+var NavigationIcons_1 = require("../../NavigationIcons/NavigationIcons");
 var Space = /** @class */ (function (_super) {
     __extends(Space, _super);
     function Space() {
@@ -23,6 +24,7 @@ var Space = /** @class */ (function (_super) {
     Space.prototype.render = function () {
         return (React.createElement("div", { className: "space-container" },
             React.createElement(SpaceBackground_1.default, null),
+            React.createElement(NavigationIcons_1.NavigationIcons, null),
             React.createElement(CompanyMotto_1.CompanyMotto, null),
             React.createElement(Moon_1.default, null)));
     };

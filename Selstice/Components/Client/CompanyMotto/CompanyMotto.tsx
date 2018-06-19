@@ -2,7 +2,7 @@
 import * as ReactDOM from 'react-dom';
 import "../CompanyMotto/CompanyMottoStylesheet.css"
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faRocket } from '@fortawesome/fontawesome-free-solid'
+import * as faRocket from '@fortawesome/fontawesome-free-solid/faRocket'
 
 export class CompanyMotto extends React.Component {
     render() {

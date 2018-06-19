@@ -12,6 +12,8 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 require("../CompanyMotto/CompanyMottoStylesheet.css");
+var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
+var faRocket = require("@fortawesome/fontawesome-free-solid/faRocket");
 var CompanyMotto = /** @class */ (function (_super) {
     __extends(CompanyMotto, _super);
     function CompanyMotto() {
@@ -19,7 +21,12 @@ var CompanyMotto = /** @class */ (function (_super) {
     }
     CompanyMotto.prototype.render = function () {
         return (React.createElement("div", { className: "container-company-motto" },
-            React.createElement("p", null, "Hello World")));
+            React.createElement("div", { className: "company-name" },
+                React.createElement("p", null, "Selstice")),
+            React.createElement("div", { className: "company-motto" },
+                React.createElement("p", null, "Come fly with us"),
+                React.createElement("div", { className: "container-icon" },
+                    React.createElement(react_fontawesome_1.default, { icon: faRocket })))));
     };
     return CompanyMotto;
 }(React.Component));

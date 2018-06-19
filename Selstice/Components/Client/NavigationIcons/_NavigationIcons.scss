@@ -1,0 +1,19 @@
+﻿.container-navigation-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+        color: white;
+        font-size: 25pt;
+        cursor: pointer;
+    }
+
+    svg:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
