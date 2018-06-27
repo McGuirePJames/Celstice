@@ -1,19 +1,27 @@
-﻿.container-navigation-icons {
+﻿.navigation-icons {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: absolute;
-    left: 35px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    svg {
+    .navigation-icons__icon {
         color: white;
-        font-size: 25pt;
+        white-space: nowrap;
+        font-size: 16pt;
         cursor: pointer;
+        margin-left: 30px;
+        font-family: 'Roboto Condensed', sans-serif;
+
+        &.navigation-icons__company-logo {
+            height: 75px;
+            width: auto;
+        }
     }
 
-    svg:not(:last-child){
-        margin-bottom: 30px;
+    .navigation-icons__icon:last-child {
+        margin-right: 30px;
     }
 }
