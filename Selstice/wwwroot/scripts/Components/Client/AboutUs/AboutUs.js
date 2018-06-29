@@ -18,12 +18,12 @@ var AboutUs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     AboutUs.prototype.render = function () {
-        return (React.createElement("section", { className: "container-about-us" },
-            React.createElement("div", { className: "container-about-us-description" },
-                React.createElement("h5", { className: "about-us-title" }, "Who are we?"),
-                React.createElement("p", null, "Cutting Edge")),
-            React.createElement("div", { className: "about-us-images" },
-                React.createElement("p", null, "Hello World"))));
+        return (React.createElement("section", { className: "about-us" },
+            React.createElement("div", { className: "about-us__container-description" },
+                React.createElement("h5", { className: "about-us__title" }, "Who are we?"),
+                React.createElement("p", { className: "about-us__description" }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")),
+            React.createElement("div", { className: "about-us__images" },
+                React.createElement("img", { src: "http://i0.kym-cdn.com/entries/icons/original/000/000/888/VanillaHappyCat.jpg" }))));
     };
     return AboutUs;
 }(React.Component));

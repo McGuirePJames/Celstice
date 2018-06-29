@@ -5,14 +5,19 @@ const Pkg = require('./package.json');
 //var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+require("babel-polyfill");
+require('file-loader')
+var DashboardPlugin = require('webpack-dashboard/plugin');
 const env = process.env.NODE_ENV
 //config = {
 
 module.exports = {
     mode: 'production',
     plugins: [
+
         //new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity }),
         //new BundleAnalyzerPlugin()
+        new DashboardPlugin({ port: 4502 }),
         new UglifyJsPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
@@ -22,7 +27,7 @@ module.exports = {
         })
     ],
     entry: {
-        HomeBundle: ['../Selstice/Scripts/Home/Entry.tsx', '../Selstice/Stylesheets/Home/Index.scss']
+        HomeBundle: ["babel-polyfill",'../Selstice/Scripts/Home/Entry.tsx', '../Selstice/Stylesheets/Home/Index.scss']
     },
 
     output: {
@@ -30,16 +35,8 @@ module.exports = {
         path: __dirname + '/wwwroot/bundles/',
         jsonpFunction: 'webpackJsonp'
     },
-
-    node: {
-        fs: 'empty'
-    },
-    //
-    // Enable sourcemaps for debugging webpack's output.
-    //devtool: 'source-map',
     devtool: 'inline-source-map',
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: ['.ts', '.tsx', ".js", ".jsx", ".json"]
     },
 
@@ -64,7 +61,6 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    //"presets": ["env"]
                     "presets": ["react"]
                 }
             },
@@ -73,17 +69,15 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,                
                 options: {
-                    //"presets": ["env"]
                     "presets": ["react"]
                 }
             },
             {
                 test: /\.scss/,
-                exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS
+                    "css-loader",
+                    "sass-loader"
                 ]
             },
             {
@@ -91,10 +85,19 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS
+                    "css-loader",
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
                 ]
             }
+           // { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
         ]
     }
 }

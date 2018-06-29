@@ -10,6 +10,7 @@
     <None Remove="Components\Client\HighOrderComponents\Space.tsx" />
     <None Remove="Components\Client\Moon\Moon.tsx" />
     <None Remove="Components\Client\NavigationIcons\NavigationIcons.tsx" />
+    <None Remove="Components\Client\ProductCarousel\ProductCarousel.tsx" />
     <None Remove="Components\Client\Products\Products.tsx" />
     <None Remove="Components\Client\Rocket\Rocket.tsx" />
     <None Remove="Scripts\Home\Entry.tsx" />
@@ -31,6 +32,7 @@
     <TypeScriptCompile Include="Components\Client\HighOrderComponents\Space\Space.tsx" />
     <TypeScriptCompile Include="Components\Client\Moon\Moon.tsx" />
     <TypeScriptCompile Include="Components\Client\NavigationIcons\NavigationIcons.tsx" />
+    <TypeScriptCompile Include="Components\Client\ProductCarousel\ProductCarousel.tsx" />
     <TypeScriptCompile Include="Components\Client\Products\Products.tsx" />
     <TypeScriptCompile Include="Components\Client\Rocket\Rocket.tsx" />
     <TypeScriptCompile Include="Scripts\Home\Entry.tsx" />
