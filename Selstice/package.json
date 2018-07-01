@@ -46,6 +46,7 @@
     "shebang-loader": "0.0.1",
     "slick-carousel": "^1.8.1",
     "ts-loader": "^4.4.1",
+    "tslint-react": "^3.6.0",
     "uglify-js": "^3.4.0"
   }
 }

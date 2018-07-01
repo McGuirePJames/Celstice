@@ -30,12 +30,12 @@ var ProductCarousel = /** @class */ (function (_super) {
     }
     ProductCarousel.prototype.render = function () {
         var settings = {
+            autoplay: true,
+            autoplaySpeed: 6000,
+            centerPadding: "60px",
             className: "center",
             infinite: true,
-            centerPadding: "60px",
             swipeToSlide: true,
-            autoplay: true,
-            autoplaySpeed: 6000
         };
         return (React.createElement(react_slick_1.default, __assign({ className: "product-carousel" }, settings),
             React.createElement("div", { className: "product-carousel__product-container" },

@@ -11,7 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("../CompanyMotto/CompanyMottoStylesheet.scss");
+require("../CompanyMotto/_CompanyMottoStylesheet.scss");
 var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
 var faRocket = require("@fortawesome/fontawesome-free-solid/faRocket");
 var CompanyMotto = /** @class */ (function (_super) {

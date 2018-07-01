@@ -1,40 +1,29 @@
-﻿import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import '../Rocket/_RocketStylesheet.scss';
-import { MouseEvent, MouseEventHandler, ReactElement } from 'react';
+﻿import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "../Rocket/_RocketStylesheet.scss";
+import { MouseEvent, MouseEventHandler, ReactElement } from "react";
 
-export interface IRocketProps {
-
-}
 export interface IRocketState {
-    rocketIgnited: boolean
+    rocketIgnited: boolean;
 }
 
-export class Rocket extends React.Component<IRocketProps, IRocketState> {
+export class Rocket extends React.Component<{},  IRocketState> {
     public constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            rocketIgnited: false
-        }
+            rocketIgnited: false,
+        };
         this.igniteRocket = this.igniteRocket.bind(this);
         this.handleRocketClick = this.handleRocketClick.bind(this);
     }
-    igniteRocket():void {
+
+    public componentDidMount(): void {
         this.setState({
             ...this.state,
-            rocketIgnited: true
-        })
+            rocketIgnited: false,
+        });
     }
-    handleRocketClick():void {
-        this.igniteRocket();
-    }
-    componentDidMount():void {
-        this.setState({
-            ...this.state, 
-            rocketIgnited: false
-        })
-    }
-    render():ReactElement<IRocketProps> {
+    public render() {
         return (
             <div id="rocket">
                 {
@@ -42,7 +31,7 @@ export class Rocket extends React.Component<IRocketProps, IRocketState> {
                         <div id="ignition">
 
                         </div>
-                    ): null
+                    ) : null
                 }
                 <div id="thruster" onClick={this.handleRocketClick}>
 
@@ -50,7 +39,16 @@ export class Rocket extends React.Component<IRocketProps, IRocketState> {
                 <div id="thrusterConnector" onClick={this.handleRocketClick}>
                 </div>
             </div>
-        )
+        );
+    }
+    private igniteRocket(): void {
+        this.setState({
+            ...this.state,
+            rocketIgnited: true,
+        });
+    }
+    private handleRocketClick(): void {
+        this.igniteRocket();
     }
 }
 export default Rocket;

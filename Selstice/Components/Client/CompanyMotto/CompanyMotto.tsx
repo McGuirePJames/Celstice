@@ -1,11 +1,11 @@
-﻿import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import "../CompanyMotto/CompanyMottoStylesheet.scss"
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import * as faRocket from '@fortawesome/fontawesome-free-solid/faRocket'
+﻿import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "../CompanyMotto/_CompanyMottoStylesheet.scss";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import * as faRocket from "@fortawesome/fontawesome-free-solid/faRocket";
 
-export class CompanyMotto extends React.Component {
-    render() {
+export class CompanyMotto extends React.Component<{}, {}> {
+    public render() {
         return (
             <div className="container-company-motto">
                 <div className="company-name">
@@ -18,7 +18,7 @@ export class CompanyMotto extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 export default CompanyMotto;

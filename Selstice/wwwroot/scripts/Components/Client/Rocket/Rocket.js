@@ -25,18 +25,12 @@ var Rocket = /** @class */ (function (_super) {
     function Rocket(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            rocketIgnited: false
+            rocketIgnited: false,
         };
         _this.igniteRocket = _this.igniteRocket.bind(_this);
         _this.handleRocketClick = _this.handleRocketClick.bind(_this);
         return _this;
     }
-    Rocket.prototype.igniteRocket = function () {
-        this.setState(__assign({}, this.state, { rocketIgnited: true }));
-    };
-    Rocket.prototype.handleRocketClick = function () {
-        this.igniteRocket();
-    };
     Rocket.prototype.componentDidMount = function () {
         this.setState(__assign({}, this.state, { rocketIgnited: false }));
     };
@@ -45,6 +39,12 @@ var Rocket = /** @class */ (function (_super) {
             this.state.rocketIgnited ? (React.createElement("div", { id: "ignition" })) : null,
             React.createElement("div", { id: "thruster", onClick: this.handleRocketClick }),
             React.createElement("div", { id: "thrusterConnector", onClick: this.handleRocketClick })));
+    };
+    Rocket.prototype.igniteRocket = function () {
+        this.setState(__assign({}, this.state, { rocketIgnited: true }));
+    };
+    Rocket.prototype.handleRocketClick = function () {
+        this.igniteRocket();
     };
     return Rocket;
 }(React.Component));

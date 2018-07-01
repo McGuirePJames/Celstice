@@ -14,18 +14,28 @@ var React = require("react");
 require("../NavigationIcons/_NavigationIcons.scss");
 var NavigationIcons = /** @class */ (function (_super) {
     __extends(NavigationIcons, _super);
-    function NavigationIcons() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function NavigationIcons(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {};
+        _this.handleNavigationIconClick = _this.handleNavigationIconClick.bind(_this);
+        return _this;
     }
     NavigationIcons.prototype.render = function () {
         return (React.createElement("div", { className: "navigation-icons" },
             React.createElement("div", { className: "navigation-icons__container" },
-                React.createElement("p", { className: "navigation-icons__icon" }, "About Us"),
-                React.createElement("p", { className: "navigation-icons__icon" }, "Products")),
+                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "aboutUsMount", onClick: this.handleNavigationIconClick }, "About Us"),
+                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "productsMount", onClick: this.handleNavigationIconClick }, "Products")),
             React.createElement("img", { className: "navigation-icons__icon navigation-icons__company-logo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" }),
             React.createElement("div", { className: "navigation-icons__container" },
-                React.createElement("p", { className: "navigation-icons__icon" }, "Services"),
-                React.createElement("p", { className: "navigation-icons__icon" }, "Contact Us"))));
+                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "servicesMount", onClick: this.handleNavigationIconClick }, "Services"),
+                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "servicesMount", onClick: this.handleNavigationIconClick }, "Contact Us"))));
+    };
+    NavigationIcons.prototype.handleNavigationIconClick = function (e) {
+        var clickedEle = e.target;
+        if (clickedEle != null) {
+            var siblingElement = document.getElementById(clickedEle.dataset.siblingId);
+            siblingElement.scrollIntoView({ behavior: "smooth" });
+        }
     };
     return NavigationIcons;
 }(React.Component));

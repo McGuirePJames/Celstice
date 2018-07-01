@@ -1,9 +1,9 @@
-﻿import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import '../Moon/MoonStylesheet.css';
+﻿import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "../Moon/MoonStylesheet.css";
 
-export class Moon extends React.Component {
-    render() {
+export class Moon extends React.Component<{}, {}> {
+    public render() {
         return (
             <div className="container-moon">
                 <div className="moon">
@@ -15,7 +15,7 @@ export class Moon extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 export default Moon;
