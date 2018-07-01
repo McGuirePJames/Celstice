@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="Components\Client\AboutUs\AboutUs.tsx" />
+    <None Remove="Components\Client\Button\Button.tsx" />
+    <None Remove="Components\Client\CompanyDetails\CompanyDetails.tsx" />
     <None Remove="Components\Client\CompanyMotto\CompanyMotto.tsx" />
     <None Remove="Components\Client\HighOrderComponents\Space.tsx" />
     <None Remove="Components\Client\Moon\Moon.tsx" />
@@ -28,6 +30,8 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="Components\Client\AboutUs\AboutUs.tsx" />
+    <TypeScriptCompile Include="Components\Client\Button\Button.tsx" />
+    <TypeScriptCompile Include="Components\Client\CompanyDetails\CompanyDetails.tsx" />
     <TypeScriptCompile Include="Components\Client\CompanyMotto\CompanyMotto.tsx" />
     <TypeScriptCompile Include="Components\Client\HighOrderComponents\Space\Space.tsx" />
     <TypeScriptCompile Include="Components\Client\Moon\Moon.tsx" />

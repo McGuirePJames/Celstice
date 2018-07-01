@@ -1,14 +1,30 @@
-﻿.company-details {
+﻿@import '../Variables/_Breakpoints.scss';
+@import '../Variables/_Breakpoints.scss';
+
+.company-details {
+    max-width: 2560px;
+    width: 65%;
+    margin: auto;
+
+    @include breakpoint(laptop) {
+        width: 85%;
+    }
 
     .company-details__company-detail {
         margin-bottom: 30px;
         padding-top: 40px;
         padding-bottom: 40px;
-        padding-left: 100px;
-        padding-right: 100px;
-    }
 
-    .company-details__company-detail:nth-child(odd) {
-        background-color: #F6F6F6;
+
+        @include breakpoint(phablet) {
+            padding-left: 0px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
     }
 }

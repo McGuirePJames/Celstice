@@ -1,6 +1,7 @@
-﻿.container-company-motto {
+﻿@import '../../../Stylesheets/Variables/_Breakpoints.scss';
+
+.container-company-motto {
     padding: 25px 70px 25px 70px;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -10,24 +11,27 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-    .container-company-motto .company-name p {
-        /*color: #00C6FF;*/
-        color: white;
-        font-weight: 600;
-        font-size: 40pt;
-        font-family: 'Roboto', sans-serif;
+    width: calc(100% - 140px); /*140px is left padding + right padding*/
+    @include breakpoint(phablet) {
+        top: 43%;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
     }
 
-    .container-company-motto .company-motto {
+    p {
+        color: white;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .company-motto {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-left: 25px;
-    }
 
-        .container-company-motto .company-motto p {
+        p {
             color: white;
             font-weight: 100;
             font-size: 20pt;
@@ -35,16 +39,22 @@
             font-family: 'Roboto Condensed', sans-serif;
         }
 
-        .container-company-motto .company-motto .container-icon {
+        .container-icon {
             margin-left: 10px;
-        }
 
-            .container-company-motto .company-motto .container-icon * {
+            * {
                 color: #D6353B;
             }
-
-    .container-company-motto p {
-        color: white;
-        margin-bottom: 0;
-        margin-top: 0;
+        }
     }
+
+    .company-name {
+        p {
+            color: white;
+            font-weight: 600;
+            font-size: 40pt;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+

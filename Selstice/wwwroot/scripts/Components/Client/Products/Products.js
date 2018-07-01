@@ -12,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var ProductCarousel_1 = require("../ProductCarousel/ProductCarousel");
+var Button_1 = require("../Button/Button");
 require("../Products/_ProductsStylesheet.scss");
 var Products = /** @class */ (function (_super) {
     __extends(Products, _super);
@@ -19,10 +20,11 @@ var Products = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Products.prototype.render = function () {
-        return (React.createElement("section", { className: "products" },
+        return (React.createElement("div", { className: "products" },
             React.createElement("div", { className: "products__container-description" },
                 React.createElement("h5", { className: "products__title" }, "Products"),
-                React.createElement("p", { className: "products__description" }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")),
+                React.createElement("p", { className: "products__description" }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."),
+                React.createElement(Button_1.default, { Text: "Learn More", Color: "#00B99A" })),
             React.createElement("div", { className: "products__images" },
                 React.createElement(ProductCarousel_1.default, null))));
     };

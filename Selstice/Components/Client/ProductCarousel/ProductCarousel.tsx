@@ -17,14 +17,6 @@ export interface IProductCarouselState {
 export class ProductCarousel extends React.Component<IProductCarouselProps, IProductCarouselState>{
     render(): ReactElement<IProductCarouselProps> {
         var settings = {
-            //dots: true,
-            //infinite: true,
-            //speed: 500,
-            //slidesToShow: 3,
-            //slidesToScroll: 3,
-            //swipeToSlide: true,
-            //autoplay: true,
-            //autoplaySpeed: 6000
             className: "center",
             infinite: true,
             centerPadding: "60px",

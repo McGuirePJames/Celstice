@@ -19,11 +19,13 @@ var NavigationIcons = /** @class */ (function (_super) {
     }
     NavigationIcons.prototype.render = function () {
         return (React.createElement("div", { className: "navigation-icons" },
-            React.createElement("p", { className: "navigation-icons__icon" }, "About Us"),
-            React.createElement("p", { className: "navigation-icons__icon" }, "Products"),
+            React.createElement("div", { className: "navigation-icons__container" },
+                React.createElement("p", { className: "navigation-icons__icon" }, "About Us"),
+                React.createElement("p", { className: "navigation-icons__icon" }, "Products")),
             React.createElement("img", { className: "navigation-icons__icon navigation-icons__company-logo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" }),
-            React.createElement("p", { className: "navigation-icons__icon" }, "Services"),
-            React.createElement("p", { className: "navigation-icons__icon" }, "Contact Us")));
+            React.createElement("div", { className: "navigation-icons__container" },
+                React.createElement("p", { className: "navigation-icons__icon" }, "Services"),
+                React.createElement("p", { className: "navigation-icons__icon" }, "Contact Us"))));
     };
     return NavigationIcons;
 }(React.Component));

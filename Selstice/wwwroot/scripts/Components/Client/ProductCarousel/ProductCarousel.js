@@ -22,10 +22,7 @@ var React = require("react");
 var react_slick_1 = require("react-slick");
 require("../ProductCarousel/_ProductCarouselStylesheet.scss");
 require("../../../node_modules/slick-carousel/slick/slick.scss");
-//import '../../../Stylesheets/slick.scss';
-//import '../../../Stylesheets/_slick-theme.scss'
 require("../../../node_modules/slick-carousel/slick/slick-theme.scss");
-require("../../../wwwroot/images/CatPics/Cat1.jpg");
 var ProductCarousel = /** @class */ (function (_super) {
     __extends(ProductCarousel, _super);
     function ProductCarousel() {
@@ -33,19 +30,20 @@ var ProductCarousel = /** @class */ (function (_super) {
     }
     ProductCarousel.prototype.render = function () {
         var settings = {
-            dots: true,
+            className: "center",
             infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
+            centerPadding: "60px",
+            swipeToSlide: true,
+            autoplay: true,
+            autoplaySpeed: 6000
         };
         return (React.createElement(react_slick_1.default, __assign({ className: "product-carousel" }, settings),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "'../../../wwwroot/images/CatPics/Cat1.jpg'" })),
+                React.createElement("img", { className: "product-carousel__product-image", src: "http://www.funnycatsite.com/pictures/Fancy_Cat6872.jpg" })),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "'../../../wwwroot/images/CatPics/Cat2.jpg'" })),
+                React.createElement("img", { className: "product-carousel__product-image", src: "https://media.daysoftheyear.com/20171223125918/happy-cat-month-1.jpg" })),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "'../../../wwwroot/images/CatPics/Cat3.jpg'" }))));
+                React.createElement("img", { className: "product-carousel__product-image", src: "http://i0.kym-cdn.com/photos/images/original/001/163/583/0d7.jpg" }))));
     };
     return ProductCarousel;
 }(React.Component));
