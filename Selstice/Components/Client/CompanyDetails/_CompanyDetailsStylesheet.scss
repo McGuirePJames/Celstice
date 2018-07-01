@@ -6,9 +6,16 @@
     min-height: 450px;
     flex-direction: row;
     height: 450px;
-    &.reversed{
-        flex-direction:row-reverse;
+
+    &.reversed {
+        flex-direction: row-reverse;
+
+        .company-detail__container-description {
+            padding-left: 75px;
+            padding-right: 0;
+        }
     }
+
     @include breakpoint(phablet) {
         flex-direction: column;
         height: auto;

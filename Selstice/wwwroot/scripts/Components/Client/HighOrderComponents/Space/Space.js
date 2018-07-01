@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var Moon_1 = require("../../Moon/Moon");
 var SpaceBackground_1 = require("../../SpaceBackground/SpaceBackground");
 require("../Space/SpaceStylesheet.css");
 var CompanyMotto_1 = require("../../CompanyMotto/CompanyMotto");
@@ -25,8 +24,7 @@ var Space = /** @class */ (function (_super) {
         return (React.createElement("div", { className: "space-container" },
             React.createElement(SpaceBackground_1.default, null),
             React.createElement(NavigationIcons_1.NavigationIcons, null),
-            React.createElement(CompanyMotto_1.CompanyMotto, null),
-            React.createElement(Moon_1.default, null)));
+            React.createElement(CompanyMotto_1.CompanyMotto, null)));
     };
     return Space;
 }(React.Component));

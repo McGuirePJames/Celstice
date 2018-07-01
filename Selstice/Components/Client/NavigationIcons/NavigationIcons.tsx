@@ -21,7 +21,7 @@ export class NavigationIcons extends React.Component<{}, {}> {
                 <img className="navigation-icons__icon navigation-icons__company-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" />
                 <div className="navigation-icons__container">
                     <p className="navigation-icons__icon" data-sibling-id="servicesMount" onClick={this.handleNavigationIconClick}>Services</p>
-                    <p className="navigation-icons__icon" data-sibling-id="servicesMount" onClick={this.handleNavigationIconClick}>Contact Us</p>
+                    <p className="navigation-icons__icon" data-sibling-id="contactUsMount" onClick={this.handleNavigationIconClick}>Contact Us</p>
                 </div>
 
             </div>

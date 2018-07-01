@@ -13,7 +13,6 @@ export class Space extends React.Component<{}, {}> {
                 <SpaceBackground />
                 <NavigationIcons />
                 <CompanyMotto />
-                <Moon />
             </div>
         );
     }
