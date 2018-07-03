@@ -23,36 +23,21 @@ namespace Selstice
 
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
-		//     public void ConfigureServices(IServiceCollection services)
-		//     {
-		//services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-		//services.AddReact();
-		//services.AddMvc();
-		//     }
 		public IServiceProvider ConfigureServices(IServiceCollection services)
 		{
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 			services.AddReact();
 			services.AddMvc();
-			//services.AddResponseCompression(options =>
-			//{
-			//	options.Providers.Add<GzipCompressionProvider>();
-			//	options.MimeTypes =
-			//		ResponseCompressionDefaults.MimeTypes.Concat(
-			//			new[] { "application/javascript", "text/css" });
-			//});
+			//services.AddProgressiveWebApp();
 			services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
 			services.AddResponseCompression(options =>
 			{
 				options.EnableForHttps = true;
-				// options.MimeTypes = new string[] { "multipart/form-data", "application/pdf" };
 				options.Providers.Add<GzipCompressionProvider>();
 			});
 			return services.BuildServiceProvider();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
 			app.UseResponseCompression();
@@ -86,29 +71,19 @@ namespace Selstice
 			});
 			app.UseStaticFiles(new StaticFileOptions
 			{
-				//OnPrepareResponse = content =>
-				//{
-				//	if (content.File.Name.EndsWith(".js.gz"))
-				//	{
-				//		content.Context.Response.Headers["Content-Type"] = "text/javascript";
-				//	}
-				//	else if (content.File.Name.EndsWith(".css.gz"))
-				//	{
-				//		content.Context.Response.Headers["Content-Type"] = "text/css";
-				//	}
-				//	content.Context.Response.Headers["Content-Encoding"] = "gzip";
-				//}
 				OnPrepareResponse = content =>
 				{
 					if (content.File.Name.EndsWith(".js.gz"))
 					{
 						content.Context.Response.Headers.Append("Content-Type", "text/javascript");
+						content.Context.Response.Headers.Append("Content-Encoding", "gzip");
 					}
 					else if (content.File.Name.EndsWith(".css.gz"))
 					{
 						content.Context.Response.Headers.Append("Content-Type", "text/css");
+						content.Context.Response.Headers.Append("Content-Encoding", "gzip");
 					}
-					content.Context.Response.Headers.Append("Content-Encoding", "gzip");
+
 				}
 			});
 

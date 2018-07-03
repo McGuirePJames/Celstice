@@ -10,6 +10,11 @@
     &.reversed {
         flex-direction: row-reverse;
 
+        @include breakpoint(phablet) {
+            flex-direction: column;
+            height: auto;
+        }
+
         .company-detail__container-description {
             padding-left: 75px;
             padding-right: 0;

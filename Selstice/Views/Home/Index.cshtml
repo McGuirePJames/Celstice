@@ -1,19 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@using React.AspNet
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
 @*@Html.React("ParticlesServer", new
     {
 
     })*@
+@section AddToHead{
+    <link rel="stylesheet" type="text/css" href="~/bundles/HomeBundle.css.gz" defer />
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <meta name="Description" content="Learn about us and the services we offer">
+}
+@section AddToBody{
+    <script type="text/javascript" src="~/bundles/HomeBundle.bundle.js.gz"></script>
+}
 
-@*<script type="text/javascript" src="~/bundles/HomeBundle.bundle.js"></script>*@
-<script type="text/javascript" src="~/bundles/HomeBundle.bundle.js.gz"></script>
-<link href="~/bundles/HomeBundle.css.gz" rel="stylesheet" />
-@*<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>*@
-@*<link href="~/bundles/HomeBundle.css" rel="stylesheet" />*@
-<link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 <div id="navigationMount">
 
 </div>

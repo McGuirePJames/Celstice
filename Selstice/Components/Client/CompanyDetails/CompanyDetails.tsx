@@ -29,7 +29,7 @@ export class CompanyDetails extends React.Component<ICompanyDetailsProps,  {}> {
                     <Button Text={this.props.ButtonText} Color={this.props.ButtonColor} />
                 </div>
                 <div className="company-detail__images">
-                    <img src={this.props.ImagePath} />
+                    <img src={this.props.ImagePath} alt="Company Details Picture"/>
                 </div>
             </div>
         );

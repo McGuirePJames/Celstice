@@ -27,7 +27,7 @@ var CompanyDetails = /** @class */ (function (_super) {
                 React.createElement("p", { className: "company-detail__description" }, this.props.Description),
                 React.createElement(Button_1.default, { Text: this.props.ButtonText, Color: this.props.ButtonColor })),
             React.createElement("div", { className: "company-detail__images" },
-                React.createElement("img", { src: this.props.ImagePath }))));
+                React.createElement("img", { src: this.props.ImagePath, alt: "Company Details Picture" }))));
     };
     return CompanyDetails;
 }(React.Component));

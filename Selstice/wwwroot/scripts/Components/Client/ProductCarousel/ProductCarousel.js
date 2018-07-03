@@ -39,11 +39,11 @@ var ProductCarousel = /** @class */ (function (_super) {
         };
         return (React.createElement(react_slick_1.default, __assign({ className: "product-carousel" }, settings),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "http://www.funnycatsite.com/pictures/Fancy_Cat6872.jpg" })),
+                React.createElement("img", { className: "product-carousel__product-image", src: "http://www.funnycatsite.com/pictures/Fancy_Cat6872.jpg", alt: "Fancy Cat" })),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "https://media.daysoftheyear.com/20171223125918/happy-cat-month-1.jpg" })),
+                React.createElement("img", { className: "product-carousel__product-image", src: "https://media.daysoftheyear.com/20171223125918/happy-cat-month-1.jpg", alt: "Happy Cat" })),
             React.createElement("div", { className: "product-carousel__product-container" },
-                React.createElement("img", { className: "product-carousel__product-image", src: "http://i0.kym-cdn.com/photos/images/original/001/163/583/0d7.jpg" }))));
+                React.createElement("img", { className: "product-carousel__product-image", src: "http://i0.kym-cdn.com/photos/images/original/001/163/583/0d7.jpg", alt: "Happy Cat" }))));
     };
     return ProductCarousel;
 }(React.Component));

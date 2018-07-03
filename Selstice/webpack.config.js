@@ -10,20 +10,19 @@ const express = require("express");
 var compression = require("compression");
 const CompressionPlugin = require("compression-webpack-plugin");
 const env = process.env.NODE_ENV
-
-const app = express();
-
-app.get('*.js', function (req, res, next) {
-    req.url = req.url + '.gz';
-    res.set('Content-Encoding', 'gzip');
-    next();
-});
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'production',
 
     plugins: [
         new UglifyJsPlugin(),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.optimize\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: { safe: true, discardComments: { removeAll: true } },
+            canPrint: true
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
@@ -54,19 +53,17 @@ module.exports = {
             {test: /\.ts$/, exclude: /node_modules/, use: {loader: "awesome-typescript-loader"}},
             {test: /\.jsx$/,loader: 'babel-loader',exclude: /node_modules/,options: {"presets": ["react"]}},
             {test: /\.js$/,loader: 'babel-loader',exclude: /node_modules/,options: {"presets": ["react"]}},
-            {test: /\.scss/,use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"]},
-            {test: /\.css/,exclude: /node_modules/, use: [MiniCssExtractPlugin.loader,"css-loader",] },
+            { test: /\.scss/, use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]},
+            { test: /\.css/, exclude: /node_modules/, use: [ MiniCssExtractPlugin.loader , "css-loader"] },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/, use: ['file-loader',
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                            bypassOnDebug: true, // webpack@1.x
-                            disable: true, // webpack@2.x and newer
+                            bypassOnDebug: true, 
+                            disable: true, 
                         },
                     },]},
-            //{ test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/, use: [{ loader: 'file-loader?name=/public/icons/[name].[ext]', options: {} }, { loader: 'url-loader', options: { limit: 8192 } }] }
-            //{ test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/, use: [{ loader: 'url-loader' }, {loader: 'file-loader'}] }
         ]
     }
 }

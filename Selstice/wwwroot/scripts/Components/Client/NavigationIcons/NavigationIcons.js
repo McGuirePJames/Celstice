@@ -25,10 +25,10 @@ var NavigationIcons = /** @class */ (function (_super) {
             React.createElement("div", { className: "navigation-icons__container" },
                 React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "aboutUsMount", onClick: this.handleNavigationIconClick }, "About Us"),
                 React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "productsMount", onClick: this.handleNavigationIconClick }, "Products")),
-            React.createElement("img", { className: "navigation-icons__icon navigation-icons__company-logo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" }),
+            React.createElement("img", { className: "navigation-icons__icon navigation-icons__company-logo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png", alt: "Company Logo" }),
             React.createElement("div", { className: "navigation-icons__container" },
                 React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "servicesMount", onClick: this.handleNavigationIconClick }, "Services"),
-                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "servicesMount", onClick: this.handleNavigationIconClick }, "Contact Us"))));
+                React.createElement("p", { className: "navigation-icons__icon", "data-sibling-id": "contactUsMount", onClick: this.handleNavigationIconClick }, "Contact Us"))));
     };
     NavigationIcons.prototype.handleNavigationIconClick = function (e) {
         var clickedEle = e.target;

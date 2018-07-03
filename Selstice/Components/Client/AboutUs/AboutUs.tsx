@@ -14,7 +14,7 @@ export class AboutUs extends React.Component<{}, {}> {
                     <Button Text="Learn More" Color="#EA597A" />
                 </div>
                 <div className="about-us__images">
-                    <img src="http://i0.kym-cdn.com/entries/icons/original/000/000/888/VanillaHappyCat.jpg" />
+                    <img src="http://i0.kym-cdn.com/entries/icons/original/000/000/888/VanillaHappyCat.jpg" alt="HappyCat" />
                 </div>
             </div>
         );

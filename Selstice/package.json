@@ -24,6 +24,7 @@
     "image-webpack-loader": "^4.3.1",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.3",
     "preload-webpack-plugin": "^2.3.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
