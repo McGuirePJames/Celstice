@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Selstice.Data
 {
-    public class Class1
-    {
-    }
+	public class ProductPriceHistory : BaseEntity
+	{
+		public Product Product { get; set; }
+		public double Price { get; set; }
+	}
 }

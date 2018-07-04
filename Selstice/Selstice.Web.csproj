@@ -20,8 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="React.AspNet" Version="3.3.0" />
     <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.33" />
   </ItemGroup>
@@ -49,6 +53,12 @@
     <Folder Include="Scripts\NewFolder\" />
     <Folder Include="wwwroot\src\" />
     <Folder Include="wwwroot\scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Selstice.Data\Selstice.Data.csproj" />
+    <ProjectReference Include="..\Selstice.Repo\Selstice.Repo.csproj" />
+    <ProjectReference Include="..\Selstice.Service\Selstice.Service.csproj" />
   </ItemGroup>
 
 </Project>

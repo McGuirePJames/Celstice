@@ -11,6 +11,10 @@ using React.AspNet;
 using React;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.IO.Compression;
+using Selstice.Data;
+using Microsoft.EntityFrameworkCore;
+using Selstice.Repo;
+using Selstice.Service;
 
 namespace Selstice
 {
@@ -35,9 +39,18 @@ namespace Selstice
 				options.EnableForHttps = true;
 				options.Providers.Add<GzipCompressionProvider>();
 			});
+
+			services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+			services.AddTransient<IProductService, ProductService>();
+			services.AddTransient<IProductPriceHistoryService, ProductPriceHistoryPriceHistoryService>();
 			return services.BuildServiceProvider();
 		}
+		public IServiceCollection ConfigureDepencyInjection(IServiceCollection services)
+		{
 
+			return services;
+		}
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
 			app.UseResponseCompression();
