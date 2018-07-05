@@ -20,6 +20,7 @@ namespace Selstice
 {
 	public class Startup
 	{
+		private string _selsticeDbString = null;
 		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
@@ -29,6 +30,7 @@ namespace Selstice
 
 		public IServiceProvider ConfigureServices(IServiceCollection services)
 		{
+			_selsticeDbString = Configuration["SelsticeDb:ConnectionString"];
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 			services.AddReact();
 			services.AddMvc();
@@ -40,7 +42,7 @@ namespace Selstice
 				options.Providers.Add<GzipCompressionProvider>();
 			});
 
-			services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(_selsticeDbString));
 			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 			services.AddTransient<IProductService, ProductService>();
 			services.AddTransient<IProductPriceHistoryService, ProductPriceHistoryPriceHistoryService>();
@@ -105,6 +107,7 @@ namespace Selstice
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
+
 			});
 		}
 	}

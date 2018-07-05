@@ -8,7 +8,7 @@ namespace Selstice.Data
 {
 	public class BaseEntity
 	{
-		public int Id { get; set; }
+		public long Id { get; set; }
 		public DateTime CreatedOn { get; set; }
 		public DateTime ModifiedOn { get; set; }
 	}

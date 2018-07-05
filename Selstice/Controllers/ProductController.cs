@@ -11,7 +11,7 @@ using Selstice.Web.ViewModels;
 
 namespace Selstice.Web.Controllers
 {
-	[Route("/api/[controller]")]
+	[Route("api/[controller]")]
 	public class ProductController : Controller
     {
 		private readonly IProductService productService;
@@ -37,7 +37,6 @@ namespace Selstice.Web.Controllers
 
 		[HttpPost]
 		[AllowAnonymous]
-		[Route("/api/[controller]/Add")]
 		public ActionResult AddProduct(Product productArg)
 		{
 			Product product = new Product
@@ -53,10 +52,9 @@ namespace Selstice.Web.Controllers
 			return Ok();
 		}
 
-		[HttpPost]
-		[AllowAnonymous]
-		[Route("/api/[controller]/Get/{id}")]
-		public IActionResult GetProduct(long id)
+		[HttpGet]
+		[Route("/api/[controller]/Get")]
+		public IActionResult Get(long id)
 		{
 			ProductViewModel model = new ProductViewModel();
 			Product product = productService.GetProduct(id);
@@ -69,9 +67,8 @@ namespace Selstice.Web.Controllers
 			return new ObjectResult(product);
 		}
 
-		[HttpGet]
+		[HttpPost]
 		[AllowAnonymous]
-		[Route("/api/[controller]/Update{id}")]
 		public IActionResult Update(long id)
 		{
 			Product product = productService.GetProduct(id);
