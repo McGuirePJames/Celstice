@@ -24,9 +24,9 @@ namespace Selstice.Repo
 			return entities.AsQueryable();
 		}
 
-		public T Get(long id)
+		public async Task<T> Get(long id)
 		{
-			return entities.Find(id);
+			return await entities.FindAsync(id);
 		}
 		public IQueryable<T> GetQueryable()
 		{

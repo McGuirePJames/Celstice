@@ -9,7 +9,7 @@ namespace Selstice.Repo
 	public interface IRepository<T>
 	{
 		IQueryable<T> GetAll();
-		T Get(long id);
+		Task<T> Get(long id);
 		IQueryable<T> GetQueryable(long id);
 		IQueryable<T> GetQueryable();
 		void Insert(T entity);

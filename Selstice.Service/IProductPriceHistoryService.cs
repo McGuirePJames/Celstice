@@ -11,7 +11,7 @@ namespace Selstice.Service
 	{
 		void AddProductPriceHistory(ProductPriceHistory productPriceHistory);
 		List<ProductPriceHistory> GetAllProductPriceHistory();
-		ProductPriceHistory GetProductPriceHistory(long id);
+		Task<ProductPriceHistory> GetProductPriceHistory(long id);
 		void UpdateProductPriceHistory(ProductPriceHistory productPriceHistory);
 		void DeleteProductPriceHistory(ProductPriceHistory productPriceHistory);
 	}

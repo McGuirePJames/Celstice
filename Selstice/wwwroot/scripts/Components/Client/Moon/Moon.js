@@ -18,7 +18,7 @@ var Moon = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Moon.prototype.render = function () {
-        return (React.createElement("div", { className: "container-moon" },
+        return (React.createElement("div", { className: "container-moon collision" },
             React.createElement("div", { className: "moon" },
                 React.createElement("div", { className: "crater small" }),
                 React.createElement("div", { className: "crater medium" }),

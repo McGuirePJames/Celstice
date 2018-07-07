@@ -1,5 +1,6 @@
 ﻿using Selstice.Data;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 
 namespace Selstice.Service
@@ -8,7 +9,7 @@ namespace Selstice.Service
 	{
 		List<Product> GetAllProducts();
 		void AddProduct(Product product);
-		Product GetProduct(long id);
+		Task<Product> GetProduct(long id);
 		void UpdateProduct(Product product);
 		List<Product> GetProducts();
 	}

@@ -9,6 +9,7 @@ export class SpaceBackground extends React.Component<{}, {}> {
     public render() {
         return (
             <div className="container-spacebackground">
+                <Rocket />
                 <div className="spacebackground">
                     <div className="background"></div>
                     <Particles className="particles"
@@ -127,7 +128,7 @@ export class SpaceBackground extends React.Component<{}, {}> {
                     </div>
                     <div className="slide slide-two">
                         Two
-                        <Rocket />
+
                     </div>
                     <div className="slide slide-three">
                         Three

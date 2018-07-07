@@ -5,7 +5,7 @@ import "../Moon/MoonStylesheet.css";
 export class Moon extends React.Component<{}, {}> {
     public render() {
         return (
-            <div className="container-moon">
+            <div className="container-moon collision">
                 <div className="moon">
                     <div className="crater small">
                     </div>

@@ -53,11 +53,11 @@ namespace Selstice.Web.Controllers
 		}
 
 		[HttpGet]
-		[Route("/api/[controller]/Get")]
-		public IActionResult Get(long id)
+		[Route("/api/[controller]/[Action]")]
+		public async Task<IActionResult> Get(long id)
 		{
 			ProductViewModel model = new ProductViewModel();
-			Product product = productService.GetProduct(id);
+			Product product = await productService.GetProduct(id);
 			if (product != null)
 			{
 				model.Name = product.Name;
@@ -69,9 +69,9 @@ namespace Selstice.Web.Controllers
 
 		[HttpPost]
 		[AllowAnonymous]
-		public IActionResult Update(long id)
+		public async Task<IActionResult> Update(long id)
 		{
-			Product product = productService.GetProduct(id);
+			Product product = await productService.GetProduct(id);
 			if(product != null)
 			{
 				productService.UpdateProduct(product);

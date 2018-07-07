@@ -19,6 +19,10 @@ window.onload = function () {
         <AboutUs />,
         document.getElementById('aboutUsMount')
     );
+    //ReactDOM.render(
+    //    <Rocket />,
+    //    document.getElementById('rocketDebug')
+    //)
     ReactDOM.render(
         <Products />,
         document.getElementById('productsMount')

@@ -22,24 +22,24 @@ namespace Selstice.Service
 			return productPriceHistoryRepository.GetQueryable().Include(b => b.Product).ToList();
 		}
 
-		public void AddProductPriceHistory(ProductPriceHistory book)
+		public void AddProductPriceHistory(ProductPriceHistory productPriceHistory)
 		{
-			productPriceHistoryRepository.Insert(book);
+			productPriceHistoryRepository.Insert(productPriceHistory);
 		}
 
-		public ProductPriceHistory GetProductPriceHistory(long id)
+		public async Task<ProductPriceHistory> GetProductPriceHistory(long id)
 		{
-			return productPriceHistoryRepository.Get(id);
+			return await productPriceHistoryRepository.Get(id);
 		}
 
-		public void UpdateProductPriceHistory(ProductPriceHistory book)
+		public void UpdateProductPriceHistory(ProductPriceHistory productPriceHistory)
 		{
-			productPriceHistoryRepository.Update(book);
+			productPriceHistoryRepository.Update(productPriceHistory);
 		}
 
-		public void DeleteProductPriceHistory(ProductPriceHistory book)
+		public void DeleteProductPriceHistory(ProductPriceHistory productPriceHistory)
 		{
-			productPriceHistoryRepository.Delete(book);
+			productPriceHistoryRepository.Delete(productPriceHistory);
 		}
 	}
 }

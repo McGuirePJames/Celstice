@@ -32,9 +32,9 @@ namespace Selstice.Service
 			productRepository.Insert(product);
 		}
 
-		public Product GetProduct(long id)
+		public async Task<Product> GetProduct(long id)
 		{
-			return productRepository.Get(id);
+			return await productRepository.Get(id);
 		}
 
 		public void UpdateProduct(Product product)

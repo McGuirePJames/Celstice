@@ -22,6 +22,7 @@ var SpaceBackground = /** @class */ (function (_super) {
     }
     SpaceBackground.prototype.render = function () {
         return (React.createElement("div", { className: "container-spacebackground" },
+            React.createElement(Rocket_1.Rocket, null),
             React.createElement("div", { className: "spacebackground" },
                 React.createElement("div", { className: "background" }),
                 React.createElement(react_particles_js_1.default, { className: "particles", params: {
@@ -129,9 +130,7 @@ var SpaceBackground = /** @class */ (function (_super) {
                 React.createElement("div", { className: "slide slide-one" },
                     "One",
                     React.createElement(Moon_1.default, null)),
-                React.createElement("div", { className: "slide slide-two" },
-                    "Two",
-                    React.createElement(Rocket_1.Rocket, null)),
+                React.createElement("div", { className: "slide slide-two" }, "Two"),
                 React.createElement("div", { className: "slide slide-three" },
                     "Three",
                     React.createElement(Moon_1.default, null)))));
