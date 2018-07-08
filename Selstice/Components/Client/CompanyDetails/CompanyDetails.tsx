@@ -4,6 +4,7 @@ import "../CompanyDetails/_CompanyDetailsStylesheet.scss";
 import Button from "../Button/Button";
 import { MouseEvent, MouseEventHandler, ReactElement } from "react";
 
+
 export interface ICompanyDetailsProps {
     Title: string;
     Description: string;
@@ -13,13 +14,19 @@ export interface ICompanyDetailsProps {
     IconPath: string;
     Reversed: boolean;
 }
+export enum EntryAnimationDirection {
+    Left,
+    Right,
+    Up,
+    Down
+}
 export class CompanyDetails extends React.Component<ICompanyDetailsProps,  {}> {
     constructor(props) {
         super(props);
         this.state = {
 
         };
-    }
+    }     
     public render(): ReactElement<ICompanyDetailsProps> {
         return (
             <div className={this.props.Reversed ? ("reversed company-detail") : ("company-detail")}>

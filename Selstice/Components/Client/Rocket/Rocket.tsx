@@ -48,8 +48,8 @@ export class Rocket extends React.Component<{}, IRocketState> {
 
     public componentDidMount(): void {
         document.addEventListener("mousemove", this.handleMouseMove);
-        document.getElementById('spaceMount').addEventListener("mouseover", this.handleMouseEnter);
-        document.getElementById('spaceMount').addEventListener("mouseleave", this.handleMouseLeave);
+        document.getElementById('spaceBackground').addEventListener("mouseover", this.handleMouseEnter);
+        document.getElementById('spaceBackground').addEventListener("mouseleave", this.handleMouseLeave);
         window.addEventListener('resize', this.handleWindowResize);
 
         setInterval(this.checkIfComponentIsOverlapping, 75);

@@ -13,6 +13,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 require("../CompanyDetails/_CompanyDetailsStylesheet.scss");
 var Button_1 = require("../Button/Button");
+var EntryAnimationDirection;
+(function (EntryAnimationDirection) {
+    EntryAnimationDirection[EntryAnimationDirection["Left"] = 0] = "Left";
+    EntryAnimationDirection[EntryAnimationDirection["Right"] = 1] = "Right";
+    EntryAnimationDirection[EntryAnimationDirection["Up"] = 2] = "Up";
+    EntryAnimationDirection[EntryAnimationDirection["Down"] = 3] = "Down";
+})(EntryAnimationDirection = exports.EntryAnimationDirection || (exports.EntryAnimationDirection = {}));
 var CompanyDetails = /** @class */ (function (_super) {
     __extends(CompanyDetails, _super);
     function CompanyDetails(props) {
@@ -20,6 +27,9 @@ var CompanyDetails = /** @class */ (function (_super) {
         _this.state = {};
         return _this;
     }
+    CompanyDetails.prototype.componentDidMount = function () {
+        console.log("Component Mount");
+    };
     CompanyDetails.prototype.render = function () {
         return (React.createElement("div", { className: this.props.Reversed ? ("reversed company-detail") : ("company-detail") },
             React.createElement("div", { className: "company-detail__container-description" },

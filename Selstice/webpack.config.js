@@ -12,11 +12,14 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const env = process.env.NODE_ENV
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
+
 module.exports = {
     mode: 'production',
 
     plugins: [
         new UglifyJsPlugin(),
+        require('precss'),
+        require('autoprefixer'),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.optimize\.css$/g,
             cssProcessor: require('cssnano'),
@@ -53,8 +56,15 @@ module.exports = {
             {test: /\.ts$/, exclude: /node_modules/, use: {loader: "awesome-typescript-loader"}},
             {test: /\.jsx$/,loader: 'babel-loader',exclude: /node_modules/,options: {"presets": ["react"]}},
             {test: /\.js$/,loader: 'babel-loader',exclude: /node_modules/,options: {"presets": ["react"]}},
-            { test: /\.scss/, use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]},
-            { test: /\.css/, exclude: /node_modules/, use: [ MiniCssExtractPlugin.loader , "css-loader"] },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                     MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/, use: ['file-loader',
                     {

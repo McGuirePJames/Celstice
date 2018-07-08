@@ -14,11 +14,19 @@ var React = require("react");
 var ProductCarousel_1 = require("../ProductCarousel/ProductCarousel");
 var Button_1 = require("../Button/Button");
 require("../Products/_ProductsStylesheet.scss");
+require("aos/dist/aos.css");
 var Products = /** @class */ (function (_super) {
     __extends(Products, _super);
     function Products() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Products.prototype.componentDidMount = function () {
+        //setTimeout(function () {
+        //    AOS.init({
+        //        duration: 2000
+        //    })
+        //}, 5000);
+    };
     Products.prototype.render = function () {
         return (React.createElement("div", { className: "products" },
             React.createElement("div", { className: "products__container-description" },
