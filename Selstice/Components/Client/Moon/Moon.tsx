@@ -1,5 +1,4 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
 import "../Moon/MoonStylesheet.css";
 
 export class Moon extends React.Component<{}, {}> {

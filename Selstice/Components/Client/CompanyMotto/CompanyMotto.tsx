@@ -1,5 +1,4 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
 import "../CompanyMotto/_CompanyMottoStylesheet.scss";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import * as faRocket from "@fortawesome/fontawesome-free-solid/faRocket";

@@ -14,10 +14,10 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
 
     plugins: [
-        new UglifyJsPlugin(),
+        //new UglifyJsPlugin(),
         require('precss'),
         require('autoprefixer'),
         new OptimizeCssAssetsPlugin({

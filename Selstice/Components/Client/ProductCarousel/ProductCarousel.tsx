@@ -1,6 +1,4 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { MouseEvent, MouseEventHandler, ReactElement } from "react";
 import Slider from "react-slick";
 import "../ProductCarousel/_ProductCarouselStylesheet.scss";
 import "../../../node_modules/slick-carousel/slick/slick.scss";

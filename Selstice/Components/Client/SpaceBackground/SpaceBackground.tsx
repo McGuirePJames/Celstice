@@ -1,6 +1,5 @@
 ﻿import Particles from "react-particles-js";
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import "../SpaceBackground/_SpaceBackgroundStylesheet.scss";
 import Moon from "../Moon/Moon";
 import { Rocket } from "../Rocket/Rocket";
@@ -123,15 +122,12 @@ export class SpaceBackground extends React.Component<{}, {}> {
                     >
                     </Particles>
                     <div className="slide slide-one">
-                        One
                         <Moon/>
                     </div>
                     <div className="slide slide-two">
-                        Two
 
                     </div>
                     <div className="slide slide-three">
-                        Three
                         <Moon/>
                     </div>
                 </div>

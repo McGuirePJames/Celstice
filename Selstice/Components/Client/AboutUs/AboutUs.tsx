@@ -1,5 +1,4 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
 import "../AboutUs/_AboutUsStylesheet.scss";
 import Button from "../Button/Button";
 import "../../../Stylesheets/Variables/ColorThemes.scss";

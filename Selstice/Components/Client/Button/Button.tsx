@@ -1,8 +1,6 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
 import "../Button/_ButtonStylesheet.scss";
-import { MouseEvent, MouseEventHandler, ReactElement, CSSProperties, StyleHTMLAttributes } from "react";
-import { BackgroundColorProperty } from "csstype";
+import {ReactElement } from "react";
 
 export interface IButtonProps {
     Text: string;

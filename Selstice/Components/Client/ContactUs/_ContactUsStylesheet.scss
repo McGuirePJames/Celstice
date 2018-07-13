@@ -1,0 +1,66 @@
+﻿@import '../../../Stylesheets/Variables/ColorThemes.scss';
+@import '../../../Stylesheets/Variables/_Breakpoints.scss';
+
+.contact-us {
+    width: 500px;
+    padding-right: 0;
+    
+    @include breakpoint(phablet) {
+        padding-left: 75px;
+    }
+
+    @include breakpoint(tablet) {
+        padding-left: 75px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
+    *{
+        font-family: 'Roboto';
+    }
+
+    .contact-us__title {
+        color: $primary-color;
+        font-size: 22pt;
+    }
+
+    .contact-us__container-input {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        width: 100%;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 0;
+        }
+
+        .contact-us__input:first-child {
+            margin-right: 20px;
+        }
+
+        .contact-us__input {
+            width: 48%;
+
+            @include breakpoint(mobile) {
+                width: 75%;
+            }
+
+            * {
+                width: 100%;
+            }
+        }
+
+        #Message {
+            min-height: 200px;
+        }
+    }
+
+    .contact-us__message {
+        width: 100%;
+
+        * {
+            width: inherit;
+        }
+    }
+}

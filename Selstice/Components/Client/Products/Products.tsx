@@ -1,12 +1,8 @@
 ﻿import * as React from "react";
-import * as ReactDOM from "react-dom";
 import ProductCarousel from "../ProductCarousel/ProductCarousel";
 import Button from "../Button/Button";
 import "../Products/_ProductsStylesheet.scss";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Watch } from 'scrollmonitor-react';
-
 
 export class Products extends React.Component<{}, {}> {
     componentDidMount() {

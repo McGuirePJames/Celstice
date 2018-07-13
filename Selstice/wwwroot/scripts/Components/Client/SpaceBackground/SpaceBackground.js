@@ -1,31 +1,15 @@
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_particles_js_1 = require("react-particles-js");
-var React = require("react");
-require("../SpaceBackground/_SpaceBackgroundStylesheet.scss");
-var Moon_1 = require("../Moon/Moon");
-var Rocket_1 = require("../Rocket/Rocket");
-var SpaceBackground = /** @class */ (function (_super) {
-    __extends(SpaceBackground, _super);
-    function SpaceBackground() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    SpaceBackground.prototype.render = function () {
+import Particles from "react-particles-js";
+import * as React from "react";
+import "../SpaceBackground/_SpaceBackgroundStylesheet.scss";
+import Moon from "../Moon/Moon";
+import { Rocket } from "../Rocket/Rocket";
+export class SpaceBackground extends React.Component {
+    render() {
         return (React.createElement("div", { className: "container-spacebackground" },
-            React.createElement(Rocket_1.Rocket, null),
+            React.createElement(Rocket, null),
             React.createElement("div", { className: "spacebackground" },
                 React.createElement("div", { className: "background" }),
-                React.createElement(react_particles_js_1.default, { className: "particles", params: {
+                React.createElement(Particles, { className: "particles", params: {
                         particles: {
                             number: {
                                 value: 175,
@@ -128,15 +112,10 @@ var SpaceBackground = /** @class */ (function (_super) {
                         },
                     } }),
                 React.createElement("div", { className: "slide slide-one" },
-                    "One",
-                    React.createElement(Moon_1.default, null)),
-                React.createElement("div", { className: "slide slide-two" }, "Two"),
+                    React.createElement(Moon, null)),
+                React.createElement("div", { className: "slide slide-two" }),
                 React.createElement("div", { className: "slide slide-three" },
-                    "Three",
-                    React.createElement(Moon_1.default, null)))));
-    };
-    return SpaceBackground;
-}(React.Component));
-exports.SpaceBackground = SpaceBackground;
-exports.default = SpaceBackground;
-//# sourceMappingURL=SpaceBackground.js.map
+                    React.createElement(Moon, null)))));
+    }
+}
+export default SpaceBackground;

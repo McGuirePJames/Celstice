@@ -60,7 +60,7 @@ namespace Selstice
 			ReactSiteConfiguration.Configuration = new ReactSiteConfiguration().AddScript("~/Scripts/Home/ParticlesServer.jsx");
 			if (env.IsDevelopment())
 			{
-				app.UseBrowserLink();
+				//app.UseBrowserLink();
 				app.UseDeveloperExceptionPage();
 			}
 			else

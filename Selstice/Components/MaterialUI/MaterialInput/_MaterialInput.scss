@@ -1,0 +1,9 @@
+﻿@import '../../../Stylesheets/Variables/ColorThemes.scss';
+
+.material-ui-input > div:after {
+    border-bottom-color: $primary-color !important;
+}
+
+.material-ui-input label {
+    color: $primary-color !important;
+}

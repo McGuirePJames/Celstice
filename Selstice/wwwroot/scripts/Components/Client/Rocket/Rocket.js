@@ -1,39 +1,18 @@
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
-var ReactDOM = require("react-dom");
-require("../Rocket/_RocketStylesheet.scss");
-var Direction;
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "../Rocket/_RocketStylesheet.scss";
+export var Direction;
 (function (Direction) {
     Direction[Direction["SharpUp"] = 0] = "SharpUp";
     Direction[Direction["Up"] = 1] = "Up";
     Direction[Direction["Flat"] = 2] = "Flat";
     Direction[Direction["Down"] = 3] = "Down";
     Direction[Direction["SharpDown"] = 4] = "SharpDown";
-})(Direction = exports.Direction || (exports.Direction = {}));
-var Rocket = /** @class */ (function (_super) {
-    __extends(Rocket, _super);
-    function Rocket(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
+})(Direction || (Direction = {}));
+export class Rocket extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             rocketIgnited: true,
             x: 400,
             y: 400,
@@ -43,25 +22,24 @@ var Rocket = /** @class */ (function (_super) {
             cursorDirection: Direction.Flat,
             isDestroyed: false
         };
-        _this.igniteRocket = _this.igniteRocket.bind(_this);
-        _this.handleRocketClick = _this.handleRocketClick.bind(_this);
-        _this.handleMouseMove = _this.handleMouseMove.bind(_this);
-        _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
-        _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
-        _this.handleWindowResize = _this.handleWindowResize.bind(_this);
-        _this.checkIfComponentIsOverlapping = _this.checkIfComponentIsOverlapping.bind(_this);
-        _this.getRotateDirection = _this.getRotateDirection.bind(_this);
-        return _this;
+        this.igniteRocket = this.igniteRocket.bind(this);
+        this.handleRocketClick = this.handleRocketClick.bind(this);
+        this.handleMouseMove = this.handleMouseMove.bind(this);
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+        this.handleWindowResize = this.handleWindowResize.bind(this);
+        this.checkIfComponentIsOverlapping = this.checkIfComponentIsOverlapping.bind(this);
+        this.getRotateDirection = this.getRotateDirection.bind(this);
     }
-    Rocket.prototype.componentDidMount = function () {
+    componentDidMount() {
         document.addEventListener("mousemove", this.handleMouseMove);
         document.getElementById('spaceBackground').addEventListener("mouseover", this.handleMouseEnter);
         document.getElementById('spaceBackground').addEventListener("mouseleave", this.handleMouseLeave);
         window.addEventListener('resize', this.handleWindowResize);
         setInterval(this.checkIfComponentIsOverlapping, 75);
-    };
-    Rocket.prototype.render = function () {
-        var rocketStyle = {
+    }
+    render() {
+        const rocketStyle = {
             left: this.state.x,
             top: this.state.y,
             transform: "rotate(" + this.getRotateDeg(this.state.cursorDirection) + "deg)",
@@ -71,18 +49,18 @@ var Rocket = /** @class */ (function (_super) {
             this.state.rocketIgnited ? (React.createElement("div", { id: "ignition" })) : null,
             React.createElement("div", { id: "thruster", onClick: this.handleRocketClick }),
             React.createElement("div", { id: "thrusterConnector", onClick: this.handleRocketClick })));
-    };
-    Rocket.prototype.igniteRocket = function () {
-        this.setState(__assign({}, this.state, { rocketIgnited: true }));
-    };
-    Rocket.prototype.handleRocketClick = function () {
+    }
+    igniteRocket() {
+        this.setState(Object.assign({}, this.state, { rocketIgnited: true }));
+    }
+    handleRocketClick() {
         this.igniteRocket();
-    };
-    Rocket.prototype.checkIfComponentIsOverlapping = function () {
-        var component = ReactDOM.findDOMNode(this.refs.component);
-        var componentBounding = component.getBoundingClientRect();
-        var collisionElements = document.getElementsByClassName('collision');
-        for (var i = 0; i < collisionElements.length; i++) {
+    }
+    checkIfComponentIsOverlapping() {
+        const component = ReactDOM.findDOMNode(this.refs.component);
+        const componentBounding = component.getBoundingClientRect();
+        const collisionElements = document.getElementsByClassName('collision');
+        for (let i = 0; i < collisionElements.length; i++) {
             var currentelement = collisionElements[i];
             var currentElementBounding = currentelement.getBoundingClientRect();
             var overlap = !(componentBounding.right < currentElementBounding.left ||
@@ -95,28 +73,22 @@ var Rocket = /** @class */ (function (_super) {
                 });
             }
         }
-    };
-    Rocket.prototype.handleMouseMove = function (e) {
-        //var component = ReactDOM.findDOMNode(this.refs.component);
-        //if (e.target !== component && !component.contains(e.target)) {
+    }
+    handleMouseMove(e) {
         if (this.state.cursorInElement) {
-            this.setState(__assign({}, this.state, { x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
+            this.setState(Object.assign({}, this.state, { x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
         }
-    };
-    Rocket.prototype.handleMouseEnter = function (e) {
-        this.setState(__assign({}, this.state, { cursorInElement: true, 
-            //x: Number(e.clientX) >= this.state.windowWidth / 1.75 ? e.clientX - 200 : 400,
-            x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
-    };
-    Rocket.prototype.handleMouseLeave = function (e) {
-        this.setState(__assign({}, this.state, { cursorInElement: false, 
-            //x: Number(e.clientX) >= this.state.windowWidth / 1.75 ? e.clientX - 200 : 400,
-            x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
-    };
-    Rocket.prototype.handleWindowResize = function (e) {
-        this.setState(__assign({}, this.state, { windowWidth: window.innerWidth }));
-    };
-    Rocket.prototype.getRotateDirection = function (movementY) {
+    }
+    handleMouseEnter(e) {
+        this.setState(Object.assign({}, this.state, { cursorInElement: true, x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
+    }
+    handleMouseLeave(e) {
+        this.setState(Object.assign({}, this.state, { cursorInElement: false, x: Number(e.clientX) - 200, y: Number(e.clientY) - this.state.rocketWidth, cursorDirection: this.getRotateDirection(e.movementY) }));
+    }
+    handleWindowResize(e) {
+        this.setState(Object.assign({}, this.state, { windowWidth: window.innerWidth }));
+    }
+    getRotateDirection(movementY) {
         if (movementY >= 4) {
             return Direction.Down;
         }
@@ -132,8 +104,8 @@ var Rocket = /** @class */ (function (_super) {
         else {
             return Direction.Up;
         }
-    };
-    Rocket.prototype.getRotateDeg = function (direction) {
+    }
+    getRotateDeg(direction) {
         if (direction === Direction.SharpUp) {
             return 45;
         }
@@ -149,9 +121,6 @@ var Rocket = /** @class */ (function (_super) {
         else if (direction === Direction.SharpDown) {
             return 135;
         }
-    };
-    return Rocket;
-}(React.Component));
-exports.Rocket = Rocket;
-exports.default = Rocket;
-//# sourceMappingURL=Rocket.js.map
+    }
+}
+export default Rocket;

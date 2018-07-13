@@ -1,8 +1,6 @@
 ﻿import * as React from "react";
 import * as ReactDOM from "react-dom";
 import "../Rocket/_RocketStylesheet.scss";
-import { MouseEvent, MouseEventHandler, ReactElement } from "react";
-import ReactCSSTransitionGroup from 'react-transition-group/Transition';
 
 export interface IRocketState {
     rocketIgnited: boolean;
